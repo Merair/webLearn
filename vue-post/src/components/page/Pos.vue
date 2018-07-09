@@ -1,33 +1,50 @@
 <template>
-  <div class="hello">
-      Hello
+  <div class="pos">
+    <el-row>
+      <el-col :span='7' class="pos-order" id="order-list">
+        <el-tabs>
+          <el-tab-pane label="点餐">
+            <el-table>
+              <el-table-column prop="goodsName" label="商品名称"></el-table-column>
+              <el-table-column prop="coumt" label="数量"></el-table-column>
+              <el-table-column prop="price" label="金额"></el-table-column>
+              <el-table-column  label="操作">
+                <template scope>
+                  <el-button type="text" size="small"></el-button>
+                </template>
+              </el-table-column>
+            </el-table>
+          </el-tab-pane>
+          <el-tab-pane label="挂单">
+            挂单
+          </el-tab-pane>
+          <el-tab-pane label="外卖">
+            外卖
+          </el-tab-pane>
+        </el-tabs>
+      </el-col>
+      <el-col>
+        我是产品栏
+      </el-col>
+    </el-row>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'HelloWorld',
-  data () {
-    return {
-      msg: 'Welcome to Your Vue.js App'
-    }
+  name: 'pos',
+  mounted: function () {
+    // 原生获取屏幕高度
+    var orderHight = document.body.clientHeight
+    console.log(orderHight)
+    document.getElementById('order-list').style.height = orderHight + 'px'
   }
 }
 </script>
 
 <style scoped>
-h1, h2 {
-  font-weight: normal;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
+.pos-order{
+  background-color: rgb(254, 254, 255);
+  border-right: 1px solid #C0CCDA
 }
 </style>
