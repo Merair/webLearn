@@ -1,9 +1,29 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<meta charset="utf-8">
+	<title>event</title>
 </head>
 <body>
+	<div id="ev">
+		<style>
+			#ev{
+				width: 300px;
+				height: 100px;
+				color: #FFF;
+				text-align: center;
+				line-height: 100px;
+			}
+		</style>
+	</div>
+	<script type="text/javascript">
+		ver ev=document.getElementById('ev');
+
+		window.addEvenrListener('click',function () {
+
+			// body...
+		},true);// true 为捕获 false 为冒泡
+	</script>
 
 </body>
 </html>
