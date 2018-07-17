@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>特殊字体引入</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            font-family: lll;
+            line-height: 60px;
+        }
+        article{
+            font-size: 30px;
+            font-variant: small-caps;
+            /* 小型大写字母 */
+        }
+        @font-face{
+            font-family: shiguang;
+            src: url(shiguang.OTF);
+        }
+        @font-face{
+            font-family: dingding;
+            src: url(dingding.OTF);
+        }
+        @font-face{
+            font-family: lll;
+            src: url(lll.OTF);
+        }
+        @font-face{
+            font-family: jian;
+            src: url(jian.ttf);
+        }
+        @font-face{
+            font-family: hanyi;
+            src: url(hanyi.TTF);
+        }
+        @font-face{
+            font-family: happy;
+            src: url(happy.ttf);
+        }
+    </style>
+</head>
+<body>
+    <section id="showFont">
+        <h1>字体展示</h1>
+        <hr>
+        <style>
+            #showFont h1{
+                font-size: 50px;
+                line-height: 80px;
+            }
+        </style>
+        <article>
+            <sapn style="font-family: lll">各种字体大荟萃hello</sapn><br>
+            <sapn style="font-family: dingding">各种字体大荟萃hello</sapn><br>
+            <sapn style="font-family: shiguang">各种字体大荟萃hello</sapn><br>
+            <sapn style="font-family: jian">各种字体大荟萃hello</sapn><br>
+            <sapn style="font-family: hanyi">各种字体大荟萃hello</sapn><br>
+            <sapn style="font-family: happy">各种字体大荟萃hello</sapn><br>
+        </article>
+    </section>
+
+    
+</body>
+</html>
