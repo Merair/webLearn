@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div {
+            position: absolute;
+            left: 20px;
+            width: 100px;
+            height: 100px;
+            background: aquamarine;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        哈哈哈哈哈哈哈
+    </div>
+    <script>
+        var oDiv = document.querySelector('div');
+
+        function animate(obj, time, property, distance) {
+            var time = time || 1000;
+            var interval = 20;
+            var frames = time / interval;
+            var distance = distance || 500;
+            var step = distance / frames;
+            var frame = 0;
+            var nowDist = parseInt(getComputedStyle(obj)[property]);
+
+            var timer = setInterval(function () {
+                frame++;
+                obj.style[property] = nowDist + (step * frame) + "px";
+                if (frame >= frames) {
+                    clearInterval(timer);
+                }
+            }, interval)
+        }
+
+        animate(oDiv,1000,'top',300);
+        animate(oDiv,3000,'left',500);
+        animate(oDiv,5000,'fontSize',50);
+    </script>
+</body>
+
+</html>
